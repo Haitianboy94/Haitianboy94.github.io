@@ -435,7 +435,7 @@ const SESSION_KEY = 'rl_admin_session';
    crypto.subtle.digest('SHA-256', new TextEncoder().encode('yourNewPassword'))
      .then(b => console.log([...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')))
    ────────────────────────────────────────────────────────────── */
-const PW_HASH = 'cf327c680b5e760be5d502fb0f15d1df1cddc36206f7de2cb3a8c3b9643d57b7';
+const PW_HASH = '2078580f64e5972b000a3820c03c4afb5c9d784cfb6a144c3482c837867cde8b';
 
 async function hashPassword(pw) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pw));
